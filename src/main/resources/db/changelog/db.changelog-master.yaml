@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - preConditions:
+      - onError: WARN
+      - onFail: WARN
+  - changeSet:
+      id: 1
+      author: Linh
+      changes:
+        - sqlFile:
+            relativeToChangelogFile: true
+            path: <path-to-file-1>
+        - sqlFile:
+            relativeToChangelogFile: true
+            path: <path-to-file-2>
