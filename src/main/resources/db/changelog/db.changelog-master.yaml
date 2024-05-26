@@ -1,14 +1,28 @@
 databaseChangeLog:
   - preConditions:
-      - onError: WARN
-      - onFail: WARN
+      - onError: HALT
+      - onFail: HALT
   - changeSet:
-      id: 1
+      id: feature/ARKKHWYAFD-1001
       author: Linh
       changes:
         - sqlFile:
-            relativeToChangelogFile: true
-            path: <path-to-file-1>
+            relativeToChangelogFile: false
+            path: db/sql/ARKKHWYAFD-1001/create_requests_table.sql
         - sqlFile:
-            relativeToChangelogFile: true
-            path: <path-to-file-2>
+            relativeToChangelogFile: false
+            path: db/sql/ARKKHWYAFD-1001/create_request_datasets_table.sql
+  - changeSet:
+      id: feature/ARKKHWYAFD-1002
+      author: Linh
+      changes:
+        - sqlFile:
+            relativeToChangelogFile: false
+            path: db/sql/ARKKHWYAFD-1002/insert_new_column_requests.sql
+  - changeSet:
+      id: feature/ARKKHWYAFD-1003
+      author: Linh
+      changes:
+        - sqlFile:
+            relativeToChangelogFile: false
+            path: db/sql/ARKKHWYAFD-1003/alter_requests_table.sql
